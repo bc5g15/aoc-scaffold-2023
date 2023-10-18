@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://github.com/bc5g15/aoc-scaffold-2023",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
