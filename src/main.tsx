@@ -2,12 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 // import App from './App.tsx'
 import './index.css'
-import { createBrowserRouter, RouterProvider} from 'react-router-dom';
+import { createHashRouter, RouterProvider} from 'react-router-dom';
 import { Root } from './Root.tsx';
 import { Template } from './puzzles/Template.tsx';
 import { puzzleIndex2015 } from './puzzles/2015/puzzleIndex2015.tsx';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Root />,
