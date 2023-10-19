@@ -4,9 +4,8 @@ import { puzzleIndex2015 } from './puzzles/2015/puzzleIndex2015';
 
 const StyleLink: FC<NavLinkProps> = ({ children, to }) => {
     return (
-        <NavLink to={to} style={({ isActive, isPending }) => ({
+        <NavLink to={to} style={({ isActive }) => ({
             fontWeight: isActive ? 'bolder' : '',
-            color: isPending ? 'red' : 'white'
         })}>
             {children}
         </NavLink>
