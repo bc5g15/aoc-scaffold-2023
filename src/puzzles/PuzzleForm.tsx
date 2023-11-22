@@ -16,6 +16,7 @@ export const PuzzleForm: FC<PuzzleFormProps> = ({ onSolve }) => {
             flexDirection: 'column'
         }}>
             <textarea name='puzzle-input' 
+                rows={10}
                 value={puzzleInput}
                 onChange={e => setPuzzleInput(e.target.value)}/>
             <button onClick={() => setSolution(onSolve(puzzleInput.trim()))}>
