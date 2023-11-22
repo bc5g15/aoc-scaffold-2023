@@ -17,8 +17,8 @@ export const PuzzleForm: FC<PuzzleFormProps> = ({ onSolve }) => {
         }}>
             <textarea name='puzzle-input' 
                 value={puzzleInput}
-                onChange={e => setPuzzleInput(e.target.value.trim())}/>
-            <button onClick={() => setSolution(onSolve(puzzleInput))}>
+                onChange={e => setPuzzleInput(e.target.value)}/>
+            <button onClick={() => setSolution(onSolve(puzzleInput.trim()))}>
                 Submit
             </button>
             <div id='solution-box' style={{
