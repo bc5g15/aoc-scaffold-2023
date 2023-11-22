@@ -6,6 +6,7 @@ import { createHashRouter, RouterProvider} from 'react-router-dom';
 import { Root } from './Root.tsx';
 import { Template } from './puzzles/Template.tsx';
 import { puzzleIndex2015 } from './puzzles/2015/puzzleIndex2015.tsx';
+import { puzzleIndex2018 } from './puzzles/2018/puzzleIndex2018.tsx';
 
 const router = createHashRouter([
   {
@@ -21,6 +22,17 @@ const router = createHashRouter([
         path: '2015',
         children: [
           ...(puzzleIndex2015.map((item, index) => (
+            {
+              ...item,
+              path: `${index+1}`
+            }
+          )))
+        ]
+      },
+      {
+        path: '2018',
+        children: [
+          ...(puzzleIndex2018.map((item, index) => (
             {
               ...item,
               path: `${index+1}`
